@@ -26,7 +26,7 @@ import "../global.css";
             <button class="btn btn-primary btn-block next-button" id="yesButton"
               >Так</button
             >
-            <button class="btn btn-primary btn-block" id="noButton">Ні</button>
+            <button class="btn btn-primary btn-block btn-disabled">Ні</button>
           </div>
         </div>
       </div>
@@ -92,9 +92,6 @@ import "../global.css";
     });
   });
 
-  noButton.addEventListener("click", () => {
-    noButton.classList.add("btn-disabled");
-  });
 </script>
 
 <style>
