@@ -1,0 +1,75 @@
+---
+import "../global.css"
+---
+
+<!DOCTYPE html>
+<html lang="en" data-theme="valentine">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Открытка</title>
+    <link href="../global.css" rel="stylesheet">
+</head>
+<body>
+	<audio src="URL"></audio>
+  <div class="card card-compact w-96 bg-base-100 shadow-xl card1">
+    <figure><img style="width: 100%;" src="https://media.discordapp.net/attachments/854647157495824394/1207045399983038484/3d-D0BFD0BBD18ED188D0B5D0B2D18BD0B9-D0BCD0B8D188D0BAD0B0-D181-D180D0BED0B7D0BED0B2D18BD0BC-D0BFD183D188D0B8D181D182D18BD0BC-D0BCD0B5D185D0BED0BC-D0B4D0B5D180D0B6D0B0D189D0B8D0BC-D180D0BED0B7D0BED0B2D18BD0B9-D181D0B8D0BCD0B2D0BED0BB-D0B2D0BED0BFD180D0BED181D0B8D182D0B5D0BBD18CD0BDD18BD0B9-D0B7D0BDD0B0D0BA-3d.png?ex=65de37a1&is=65cbc2a1&hm=016948d20ccc21bce8192a06cf98878320bbdf5646c77a1072a7e6c02019f63a&=&format=webp&quality=lossless&width=832&height=832" alt="Shoes" /></figure>
+    <div class="card-body">
+      <h2 class="card-title">Будеш моєю валентинкою?</h2>
+      <div style="padding-top: 5%" class="card-actions justify-end">
+        <button class="btn btn-primary btn-block next-button" id="yesButton">Так</button>
+        <button class="btn btn-primary btn-block" id="noButton">Ні</button>
+      </div>
+    </div>
+  </div>
+  <div class="card card-compact w-96 bg-base-100 shadow-xl" style="display: none;">
+    <div class="card-body">
+		<figure><img style="width: 100%;" src="https://media.discordapp.net/attachments/854647157495824394/1207055755518152714/2Q.png?ex=65de4146&is=65cbcc46&hm=34c9d6267cee79c9972a7822321a090bc271f1d7eb95480560b594e9ff3ee57a&=&format=webp&quality=lossless&width=440&height=458" alt="Shoes" /></figure>
+      <h2 class="card-title">Урааа дякую!!! Ти найкраща❤️</h2>
+      <div style="padding-top: 5%" class="card-actions justify-end">
+        <button class="btn btn-primary btn-block next-button" id="yesButton">Далі</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card card-compact w-96 bg-base-100 shadow-xl" style="display: none;">
+    <figure><img style="width: 100%;" src="https://media.discordapp.net/attachments/854647157495824394/1207033568262623303/mychka.png?ex=65de2c9c&is=65cbb79c&hm=f5187e538e5478f06226190811af09beb0c49c96a7f428e2185a289b69d8768e&=&format=webp&quality=lossless&width=1064&height=1064" alt="Shoes" /></figure>
+    <div class="card-body">
+      <h2 class="card-title">Давай зустрінемся в 18 40 в парку?</h2>
+	  <p>Я знаю що бабушка але в мене для тебе дещо є))). Якщо вийде то можна раніше (це на залежить від мене)</p>
+	  <div style="padding-top: 5%" class="card-actions justify-end">
+        <button class="btn btn-secondary btn-block" id="yesButton"><a href="https://t.me/kotop21">Написати</a></button>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  const nextButtons = document.querySelectorAll('.next-button');
+  const cards = document.querySelectorAll('.card');
+
+  nextButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      cards[index].style.display = 'none';
+      const nextIndex = (index + 1) % cards.length; // Loop back to the first card if reaching the end
+      cards[nextIndex].style.display = 'block';
+    });
+  });
+
+  noButton.addEventListener('click', () => {
+    noButton.classList.add('btn-disabled');
+  });
+</script>
+
+</html>
+
+<style>
+	
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+</style>
